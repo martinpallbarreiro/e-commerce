@@ -36,17 +36,21 @@ var getJSONData = function(url){
       return result;
   });
 }
-let entrar = JSON.parse(localStorage.getItem("usuario"));
-
-if (entrar){
-  console.log(entrar);
+// let entrar = JSON.parse(localStorage.getItem("usuario"));
+let entrar = localStorage.getItem("usuario");
+//const usu = localStorage.getItem("usuario");
+if (entrar){  
+  document.getElementById("usuario123").innerHTML= entrar;
 }else{
   window.location="login.html";
 }
 
+
+ 
 //Función que se ejecuta una vez que se haya lanzado el evento de
 //que el documento se encuentra cargado, es decir, se encuentran todos los
 //elementos HTML presentes.
+
 
 
 

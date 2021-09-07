@@ -2,12 +2,14 @@ const logIn =[];
 const logear =() => {
     const user = document.getElementById("txtUser").value;
     const password = document.getElementById("txtPassword").value;    
-    console.log(user, password);
+    //console.log(user, password);
     if(user && password){
         document.getElementById("txtUser").value ="";
         document.getElementById("txtPassword").value ="";        
-        logIn.push({user,password});    
-        localStorage.setItem("usuario", JSON.stringify(logIn));        
+        logIn.push({user});    
+        localStorage.setItem("usuario",user);//JSON.stringify(logIn));  
+       
+        //JSON.stringify(user)   
         window.location="index.html";
     }else{
         
